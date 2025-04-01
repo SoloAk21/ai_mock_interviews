@@ -1,5 +1,3 @@
-// import Agent from "@/components/Agent";
-
 import Agent from "@/components/Agent";
 import { getCurrentUser } from "@/lib/actions/auth.actions";
 
@@ -11,8 +9,8 @@ const Page = async () => {
       <h3>Interview generation</h3>
 
       <Agent
-        userName="YOUR_USERNAME"
-        userId="YOUR_USER_ID"
+        userName={user?.name!}
+        userId={user?.id}
         // profileImage={user?.profileURL}
         type="generate"
       />
